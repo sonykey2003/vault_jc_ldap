@@ -18,7 +18,7 @@ On JumpCloud:
 
 
 On Vagrant:
-1. Recommended to run line-by-lines in vault_jc_ldap.sh
+1. Recommended to run line-by-lines in vault_jc_ldap.sh. Fill in your own JumpCloud OrgID, LDAP bind account name and password.  
 2. You will get this message once logged in successfully via LDAP:
 ```sh
 Success! You are now authenticated. The token information displayed below

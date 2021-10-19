@@ -14,7 +14,7 @@ vault write auth/ldap/config \
  userattr=uid \
  userdn="ou=Users,o=<yourorgid>,dc=jumpcloud,dc=com" \
  groupdn="ou=Users,o=<yourorgid>,dc=jumpcloud,dc=com" \
- binddn="uid=vault.ldap,ou=Users,o=<yourorgid>,dc=jumpcloud,dc=com" \
+ binddn="uid=<yourldapbindacc>,ou=Users,o=<yourorgid>,dc=jumpcloud,dc=com" \
  bindpass=<yourpw> \
  groupfilter="(member={{.UserDN}})" \
  groupattr="memberOf" \
