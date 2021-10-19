@@ -18,7 +18,6 @@ vault write auth/ldap/config \
  bindpass=<yourpw> \
  groupfilter="(member={{.UserDN}})" \
  groupattr="memberOf" \
- token_policies="testldappolicy"
 
 #Creating policies to set permissions for different LDAP groups
 #i.e. a read-only group
@@ -36,11 +35,11 @@ path "secret/data/*" {
 EOF
 
 #Writing the policies to the server
-vault policy write systems systems.hcl
+vault policy write systems_ro systems_ro.hcl
 vault policy write systems_rw systems_rw.hcl
  
 #Associating policies to respective groups
-vault write auth/ldap/groups/systems policies=systems
+vault write auth/ldap/groups/systems_ro policies=systems_ro
 vault write auth/ldap/groups/systems_rw policies=systems_rw
 
 #Login with the user (which in one of these group) to test it out

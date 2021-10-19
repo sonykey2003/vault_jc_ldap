@@ -37,6 +37,9 @@ policies               ["default" "systems_rw"]
 token_meta_username    vault.sys_rw
 ```
 
-3. Now you can create your [first secret](https://learn.hashicorp.com/tutorials/vault/getting-started-first-secret) and switch between different LDAP user - i.e. the read-only user to test out the policy. 
-
+3. Now you can create your [first secret](https://learn.hashicorp.com/tutorials/vault/getting-started-first-secret) and switch between different LDAP user - i.e. the read-only user should not be able to make changes to the secret, but able to read the value. 
+```sh
+vault kv put secret/hello foo=world
+vault kv get secret/hello
+```
 Enjoy!
