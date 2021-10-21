@@ -1,7 +1,7 @@
 # Deploy Vault and setup LDAP auth with JumpCloud on Vagrant
-> Vault Server Dev mode will be used through out the guide, DO NOT deploy it in prod.
+> You can test it out from the devsrv branch to run Vault Server in Dev mode, **DO NOT** deploy it in prod.
 
-A quick guide for playing around with Vault with a JumpCloud as the auth backborne. 
+A quick guide for integrating Vault with JumpCloud LDAP as the auth backborne. 
 
 ## Getting Started
 
