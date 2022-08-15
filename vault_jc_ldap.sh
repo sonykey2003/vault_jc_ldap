@@ -21,7 +21,7 @@ vault write auth/ldap/config \
 
 #Creating policies to set permissions for different LDAP groups
 #i.e. a read-only group
-tee systems.hcl <<EOF
+tee systems_ro.hcl <<EOF
 path "secret/data/*" {
   capabilities = ["read", "list"]
 }
